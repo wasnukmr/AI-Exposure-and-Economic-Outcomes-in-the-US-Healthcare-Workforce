@@ -1,0 +1,74 @@
+SOC Code,Occupation Title,AIOE
+29-1011,Chiropractors,-0.1911757
+29-1021,"Dentists, General",-0.1813301
+29-1022,Oral and Maxillofacial Surgeons,-0.2389668
+29-1023,Orthodontists,0.1616631
+29-1024,Prosthodontists,-0.1561403
+29-1031,Dietitians and Nutritionists,1.342809
+29-1041,Optometrists,0.5040194
+29-1051,Pharmacists,0.6058705
+29-1061,Anesthesiologists,0.2349698
+29-1062,Family and General Practitioners,1.031925
+29-1063,"Internists, General",1.046167
+29-1064,Obstetricians and Gynecologists,0.2803215
+29-1065,"Pediatricians, General",1.126144
+29-1066,Psychiatrists,1.280753
+29-1067,Surgeons,-0.0504534
+29-1069,"Physicians and Surgeons, All Other",0.7086123
+29-1071,Physician Assistants,0.1059147
+29-1081,Podiatrists,0.6279185
+29-1122,Occupational Therapists,0.1151615
+29-1123,Physical Therapists,-0.3581922
+29-1124,Radiation Therapists,-0.2189393
+29-1125,Recreational Therapists,0.2190109
+29-1126,Respiratory Therapists,-0.1880507
+29-1127,Speech-Language Pathologists,1.146267
+29-1128,Exercise Physiologists,-0.0331901
+29-1141,Registered Nurses,0.2294097
+29-1151,Nurse Anesthetists,0.2413191
+29-1161,Nurse Midwives,0.1966265
+29-1171,Nurse Practitioners,0.1900572
+29-1181,Audiologists,0.6329063
+29-1199,"Health Diagnosing and Treating Practitioners, All Other",0.7109566
+29-2011,Medical and Clinical Laboratory Technologists,0.2818067
+29-2012,Medical and Clinical Laboratory Technicians,-0.1273315
+29-2021,Dental Hygienists,-0.416508
+29-2031,Cardiovascular Technologists and Technicians,-0.0909526
+29-2032,Diagnostic Medical Sonographers,-0.264054
+29-2033,Nuclear Medicine Technologists,0.0855276
+29-2034,Radiologic Technologists and Technicians,-0.5559037
+29-2035,Magnetic Resonance Imaging Technologists,-0.0727627
+29-2041,Emergency Medical Technicians and Paramedics,-0.6863446
+29-2051,Dietetic Technicians,-0.1260282
+29-2052,Pharmacy Technicians,0.0070256
+29-2053,Psychiatric Technicians,-0.2203484
+29-2054,Respiratory Therapy Technicians,-0.1060473
+29-2055,Surgical Technologists,-0.4830476
+29-2057,Ophthalmic Medical Technicians,0.078734
+29-2061,Licensed Practical and Licensed Vocational Nurses,-0.5137373
+29-2071,Medical Records and Health Information Technicians,0.5738765
+29-2081,"Opticians, Dispensing",0.1013966
+29-2091,Orthotists and Prosthetists,0.066577
+29-2092,Hearing Aid Specialists,0.5648953
+29-2099,"Health Technologists and Technicians, All Other",-0.283854
+29-9011,Occupational Health and Safety Specialists,0.8349371
+29-9012,Occupational Health and Safety Technicians,0.3996866
+29-9091,Athletic Trainers,-0.3311363
+29-9092,Genetic Counselors,1.527667
+29-9099,"Healthcare Practitioners and Technical Workers, All Other",0.2295568
+31-1011,Home Health Aides,-0.644942
+31-1013,Psychiatric Aides,-0.496565
+31-1014,Nursing Assistants,-0.9040212
+31-1015,Orderlies,-1.679232
+31-2011,Occupational Therapist Assistants,-0.3153762
+31-2012,Occupational Therapist Aides,-0.7734322
+31-2021,Physical Therapist Assistants,-0.5308535
+31-2022,Physical Therapist Aides,-0.8823265
+31-9011,Massage Therapists,-1.410233
+31-9091,Dental Assistants,-0.5268759
+31-9092,Medical Assistants,0.1497917
+31-9093,Medical Equipment Preparers,-0.7308648
+31-9094,Medical Transcriptionists,1.06259
+31-9095,Pharmacy Aides,-0.1552654
+31-9097,Phlebotomists,-0.2778475
+31-9099,"Healthcare Support Workers, All Other",0.1660077
