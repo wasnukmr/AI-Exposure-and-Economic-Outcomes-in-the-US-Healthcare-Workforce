@@ -1,0 +1,74 @@
+soc_code,occupation_title,aioe,group,bls_title,annual_median_wage_usd,employment,match_status,wage_source_value,employment_source_value
+29-1011,Chiropractors,-0.1911757,Practitioners and technical,Chiropractors,79200,39630,exact_code,79200,39630
+29-1021,"Dentists, General",-0.1813301,Practitioners and technical,"Dentists, General",170950,124390,exact_code,170950,124390
+29-1022,Oral and Maxillofacial Surgeons,-0.2389668,Practitioners and technical,Oral and Maxillofacial Surgeons,352220,4910,exact_code,352220,4910
+29-1023,Orthodontists,0.1616631,Practitioners and technical,Orthodontists,289140,6210,exact_code,289140,6210
+29-1024,Prosthodontists,-0.1561403,Practitioners and technical,Prosthodontists,311180,870,exact_code,311180,870
+29-1031,Dietitians and Nutritionists,1.342809,Practitioners and technical,Dietitians and Nutritionists,76400,77570,exact_code,76400,77570
+29-1041,Optometrists,0.5040194,Practitioners and technical,Optometrists,136570,42790,exact_code,136570,42790
+29-1051,Pharmacists,0.6058705,Practitioners and technical,Pharmacists,140910,321970,exact_code,140910,321970
+29-1061,Anesthesiologists,0.2349698,Practitioners and technical,,,,unmatched,,
+29-1062,Family and General Practitioners,1.031925,Practitioners and technical,,,,unmatched,,
+29-1063,"Internists, General",1.046167,Practitioners and technical,,,,unmatched,,
+29-1064,Obstetricians and Gynecologists,0.2803215,Practitioners and technical,,,,unmatched,,
+29-1065,"Pediatricians, General",1.126144,Practitioners and technical,,,,unmatched,,
+29-1066,Psychiatrists,1.280753,Practitioners and technical,,,,unmatched,,
+29-1067,Surgeons,-0.0504534,Practitioners and technical,,,,unmatched,,
+29-1069,"Physicians and Surgeons, All Other",0.7086123,Practitioners and technical,,,,unmatched,,
+29-1071,Physician Assistants,0.1059147,Practitioners and technical,Physician Assistants,135880,162150,exact_code,135880,162150
+29-1081,Podiatrists,0.6279185,Practitioners and technical,Podiatrists,160300,9680,exact_code,160300,9680
+29-1122,Occupational Therapists,0.1151615,Practitioners and technical,Occupational Therapists,100330,162450,exact_code,100330,162450
+29-1123,Physical Therapists,-0.3581922,Practitioners and technical,Physical Therapists,102760,267330,exact_code,102760,267330
+29-1124,Radiation Therapists,-0.2189393,Practitioners and technical,Radiation Therapists,105310,17070,exact_code,105310,17070
+29-1125,Recreational Therapists,0.2190109,Practitioners and technical,Recreational Therapists,61960,14930,exact_code,61960,14930
+29-1126,Respiratory Therapists,-0.1880507,Practitioners and technical,Respiratory Therapists,82280,139790,exact_code,82280,139790
+29-1127,Speech-Language Pathologists,1.146267,Practitioners and technical,Speech-Language Pathologists,97870,183390,exact_code,97870,183390
+29-1128,Exercise Physiologists,-0.0331901,Practitioners and technical,Exercise Physiologists,59460,8560,exact_code,59460,8560
+29-1141,Registered Nurses,0.2294097,Practitioners and technical,Registered Nurses,97550,3379720,exact_code,97550,3379720
+29-1151,Nurse Anesthetists,0.2413191,Practitioners and technical,Nurse Anesthetists,236590,51840,exact_code,236590,51840
+29-1161,Nurse Midwives,0.1966265,Practitioners and technical,Nurse Midwives,134040,7920,exact_code,134040,7920
+29-1171,Nurse Practitioners,0.1900572,Practitioners and technical,Nurse Practitioners,132300,323040,exact_code,132300,323040
+29-1181,Audiologists,0.6329063,Practitioners and technical,Audiologists,95780,13660,exact_code,95780,13660
+29-1199,"Health Diagnosing and Treating Practitioners, All Other",0.7109566,Practitioners and technical,,,,unmatched,,
+29-2011,Medical and Clinical Laboratory Technologists,0.2818067,Practitioners and technical,,,,unmatched,,
+29-2012,Medical and Clinical Laboratory Technicians,-0.1273315,Practitioners and technical,,,,unmatched,,
+29-2021,Dental Hygienists,-0.416508,Practitioners and technical,,,,unmatched,,
+29-2031,Cardiovascular Technologists and Technicians,-0.0909526,Practitioners and technical,Cardiovascular Technologists and Technicians,74310,62960,exact_code,74310,62960
+29-2032,Diagnostic Medical Sonographers,-0.264054,Practitioners and technical,Diagnostic Medical Sonographers,96590,90160,exact_code,96590,90160
+29-2033,Nuclear Medicine Technologists,0.0855276,Practitioners and technical,Nuclear Medicine Technologists,101370,17080,exact_code,101370,17080
+29-2034,Radiologic Technologists and Technicians,-0.5559037,Practitioners and technical,Radiologic Technologists and Technicians,80110,230490,exact_code,80110,230490
+29-2035,Magnetic Resonance Imaging Technologists,-0.0727627,Practitioners and technical,Magnetic Resonance Imaging Technologists,95480,43390,exact_code,95480,43390
+29-2041,Emergency Medical Technicians and Paramedics,-0.6863446,Practitioners and technical,,,,unmatched,,
+29-2051,Dietetic Technicians,-0.1260282,Practitioners and technical,Dietetic Technicians,37640,31560,exact_code,37640,31560
+29-2052,Pharmacy Technicians,0.0070256,Practitioners and technical,Pharmacy Technicians,45750,471680,exact_code,45750,471680
+29-2053,Psychiatric Technicians,-0.2203484,Practitioners and technical,Psychiatric Technicians,45130,156960,exact_code,45130,156960
+29-2054,Respiratory Therapy Technicians,-0.1060473,Practitioners and technical,,,,unmatched,,
+29-2055,Surgical Technologists,-0.4830476,Practitioners and technical,Surgical Technologists,64650,117460,exact_code,64650,117460
+29-2057,Ophthalmic Medical Technicians,0.078734,Practitioners and technical,Ophthalmic Medical Technicians,45570,71010,exact_code,45570,71010
+29-2061,Licensed Practical and Licensed Vocational Nurses,-0.5137373,Practitioners and technical,Licensed Practical and Licensed Vocational Nurses,64400,648410,exact_code,64400,648410
+29-2071,Medical Records and Health Information Technicians,0.5738765,Practitioners and technical,,,,unmatched,,
+29-2081,"Opticians, Dispensing",0.1013966,Practitioners and technical,"Opticians, Dispensing",47260,73530,exact_code,47260,73530
+29-2091,Orthotists and Prosthetists,0.066577,Practitioners and technical,Orthotists and Prosthetists,81110,9390,exact_code,81110,9390
+29-2092,Hearing Aid Specialists,0.5648953,Practitioners and technical,Hearing Aid Specialists,65160,11270,exact_code,65160,11270
+29-2099,"Health Technologists and Technicians, All Other",-0.283854,Practitioners and technical,"Health Technologists and Technicians, All Other",50290,182610,exact_code,50290,182610
+29-9011,Occupational Health and Safety Specialists,0.8349371,Practitioners and technical,,,,unmatched,,
+29-9012,Occupational Health and Safety Technicians,0.3996866,Practitioners and technical,,,,unmatched,,
+29-9091,Athletic Trainers,-0.3311363,Practitioners and technical,Athletic Trainers,62520,30500,exact_code,62520,30500
+29-9092,Genetic Counselors,1.527667,Practitioners and technical,Genetic Counselors,100040,3740,exact_code,100040,3740
+29-9099,"Healthcare Practitioners and Technical Workers, All Other",0.2295568,Practitioners and technical,"Healthcare Practitioners and Technical Workers, All Other",65790,35010,exact_code,65790,35010
+31-1011,Home Health Aides,-0.644942,Healthcare support,,,,unmatched,,
+31-1013,Psychiatric Aides,-0.496565,Healthcare support,,,,unmatched,,
+31-1014,Nursing Assistants,-0.9040212,Healthcare support,,,,unmatched,,
+31-1015,Orderlies,-1.679232,Healthcare support,,,,unmatched,,
+31-2011,Occupational Therapist Assistants,-0.3153762,Healthcare support,Occupational Therapy Assistants,72300,51290,exact_code,72300,51290
+31-2012,Occupational Therapist Aides,-0.7734322,Healthcare support,Occupational Therapy Aides,39160,4310,exact_code,39160,4310
+31-2021,Physical Therapist Assistants,-0.5308535,Healthcare support,Physical Therapist Assistants,68380,112430,exact_code,68380,112430
+31-2022,Physical Therapist Aides,-0.8823265,Healthcare support,Physical Therapist Aides,35240,48150,exact_code,35240,48150
+31-9011,Massage Therapists,-1.410233,Healthcare support,Massage Therapists,58450,98790,exact_code,58450,98790
+31-9091,Dental Assistants,-0.5268759,Healthcare support,Dental Assistants,48070,387790,exact_code,48070,387790
+31-9092,Medical Assistants,0.1497917,Healthcare support,Medical Assistants,45690,817870,exact_code,45690,817870
+31-9093,Medical Equipment Preparers,-0.7308648,Healthcare support,Medical Equipment Preparers,47700,77420,exact_code,47700,77420
+31-9094,Medical Transcriptionists,1.06259,Healthcare support,Medical Transcriptionists,40410,41550,exact_code,40410,41550
+31-9095,Pharmacy Aides,-0.1552654,Healthcare support,Pharmacy Aides,37680,39530,exact_code,37680,39530
+31-9097,Phlebotomists,-0.2778475,Healthcare support,Phlebotomists,45230,143540,exact_code,45230,143540
+31-9099,"Healthcare Support Workers, All Other",0.1660077,Healthcare support,"Healthcare Support Workers, All Other",48430,109740,exact_code,48430,109740
