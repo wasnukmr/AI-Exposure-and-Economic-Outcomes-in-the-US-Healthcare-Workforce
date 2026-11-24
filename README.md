@@ -1,26 +1,21 @@
 # AI Exposure and Economic Outcomes in the U.S. Healthcare Workforce
 
-ECON 3001 research project comparing occupational AI exposure with national wages and employment.
+ECON 3001 research project.
 
-- [Project report](reports/FINAL_PROJECT.md)
-- [Validation, limitations, and submission checklist](reports/VALIDATION.md)
-- [Website-ready data (JSON)](data/processed/healthcare_workforce.json)
-- [All occupations and match statuses (CSV)](data/processed/occupation_match_audit.csv)
+## Current analysis
+- [Revised project report](reports/FINAL_PROJECT.md)
+- [Validated v2 data and models](data/processed/healthcare_workforce_v2.json)
+- [Classification audit](data/reference/healthcare_soc_crosswalk_review.json)
+- [BLS education, training, and projection extract](data/reference/bls_education_projections_2025.json)
+- [Model validation and limitations](reports/MODEL_UPGRADE.md)
 
-## Validated findings
-73 healthcare occupations match the AIOE source subset. 52 have exact BLS occupational-code matches; 21 remain unmatched. The matched-sample correlation between exposure and annual median wages is approximately 0.145. These are descriptive associations, not causal estimates or job-loss forecasts.
+The stricter sample has **62 comparable occupations**: 50 unchanged-code matches and 12 official recodes. Two prior exact matches are excluded because their definitions changed. Eleven original occupations require additional mapping or aggregation assumptions.
 
-## Reproduce
-Run `node scripts/validate_data.mjs` from a checkout. The script recomputes the source subset, joins and statistics and compares them against the committed JSON. The validation report documents execution scope and limitations.
+Education controls substantially reduce the exposure-wage coefficient. Adding AIOE does not improve leave-one-occupation-out prediction over the corresponding education-based models. Findings are descriptive, not causal.
 
-Original files remain unchanged:
-- `AIOE_DataAppendix.xlsx`
-- `healthcare_ai_exposure.csv`
-- `data/bls/national_M2025_dl.xlsx`
+## Reproduction
+`node scripts/reproduce_model.mjs`
 
-## Project status
-The empirical report and data export cover AIOE, wages, and employment levels. Website work is paused pending a new build. No productivity effects or employment projections have been estimated. Confirm the final course rubric and exact API requirement before submission.
+Original workbooks and the historical exact-code export are retained. [Historical report](reports/BASELINE_EXACT_CODE_REPORT.md) and [original validation](reports/VALIDATION.md) document the prior 52-match baseline; use v2 for new analysis and the future website.
 
-## Sources
-Felten, Raj, and Seamans (2021), [AIOE dataset](https://github.com/AIOE-Data/AIOE).
-BLS [OEWS national estimates](https://www.bls.gov/oes/tables.htm), May 2025 workbook.
+Website work is paused. Confirm the course rubric, group details, and exact API requirement before submission.

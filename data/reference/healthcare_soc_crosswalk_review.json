@@ -1,0 +1,831 @@
+{
+  "source": "https://www.bls.gov/soc/2018/soc_2018_manual.pdf",
+  "appendix": "A",
+  "pdf_pages": [
+    235,
+    236,
+    237
+  ],
+  "reviewed_date": "2026-11-24",
+  "note": "Derived review of all 73 original occupations. OEWS aggregation decisions checked against repository workbook.",
+  "rows": [
+    {
+      "soc_2010": "29-1011",
+      "title_2010": "Chiropractors",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1011"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1021",
+      "title_2010": "Dentists, General",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1021"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1022",
+      "title_2010": "Oral and Maxillofacial Surgeons",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1022"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1023",
+      "title_2010": "Orthodontists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1023"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1024",
+      "title_2010": "Prosthodontists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1024"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1031",
+      "title_2010": "Dietitians and Nutritionists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1031"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1041",
+      "title_2010": "Optometrists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1041"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1051",
+      "title_2010": "Pharmacists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1051"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1061",
+      "title_2010": "Anesthesiologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1211"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1062",
+      "title_2010": "Family and General Practitioners",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1215"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1063",
+      "title_2010": "Internists, General",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1216"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1064",
+      "title_2010": "Obstetricians and Gynecologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1218"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1065",
+      "title_2010": "Pediatricians, General",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1221"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1066",
+      "title_2010": "Psychiatrists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1223"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1067",
+      "title_2010": "Surgeons",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-1242",
+        "29-1243",
+        "29-1249"
+      ],
+      "match_type": "complex_excluded",
+      "note": "One-to-many split. Could aggregate employment and employment-weighted mean wages at the old category level; medians cannot be averaged.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1069",
+      "title_2010": "Physicians and Surgeons, All Other",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-1212",
+        "29-1213",
+        "29-1214",
+        "29-1217",
+        "29-1222",
+        "29-1224",
+        "29-1229",
+        "29-1241"
+      ],
+      "match_type": "complex_excluded",
+      "note": "One-to-many split across physician specialties. Do not treat descendants as independent observations with an identical old AIOE score.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1071",
+      "title_2010": "Physician Assistants",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1071"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1081",
+      "title_2010": "Podiatrists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1081"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1122",
+      "title_2010": "Occupational Therapists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1122"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1123",
+      "title_2010": "Physical Therapists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1123"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1124",
+      "title_2010": "Radiation Therapists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1124"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1125",
+      "title_2010": "Recreational Therapists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1125"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1126",
+      "title_2010": "Respiratory Therapists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1126"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1127",
+      "title_2010": "Speech-Language Pathologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1127"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1128",
+      "title_2010": "Exercise Physiologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1128"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1141",
+      "title_2010": "Registered Nurses",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1141"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1151",
+      "title_2010": "Nurse Anesthetists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1151"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1161",
+      "title_2010": "Nurse Midwives",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1161"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1171",
+      "title_2010": "Nurse Practitioners",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1171"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1181",
+      "title_2010": "Audiologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1181"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-1199",
+      "title_2010": "Health Diagnosing and Treating Practitioners, All Other",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-1291",
+        "29-1299"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Split into acupuncturists and other practitioners.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2011",
+      "title_2010": "Medical and Clinical Laboratory Technologists",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-2010"
+      ],
+      "match_type": "complex_excluded",
+      "note": "OEWS publishes a combined laboratory technologists and technicians outcome; distinct AIOE scores cannot share that outcome as independent observations.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2012",
+      "title_2010": "Medical and Clinical Laboratory Technicians",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-2010"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Same published laboratory aggregate as 29-2011; requires a justified exposure aggregation method.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2021",
+      "title_2010": "Dental Hygienists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-1292"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2031",
+      "title_2010": "Cardiovascular Technologists and Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2031"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2032",
+      "title_2010": "Diagnostic Medical Sonographers",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2032"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2033",
+      "title_2010": "Nuclear Medicine Technologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2033"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2034",
+      "title_2010": "Radiologic Technologists and Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2034"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2035",
+      "title_2010": "Magnetic Resonance Imaging Technologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2035"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2041",
+      "title_2010": "Emergency Medical Technicians and Paramedics",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-2042",
+        "29-2043"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Split into EMTs and paramedics; aggregate or model separately only with an explicit exposure assumption.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2051",
+      "title_2010": "Dietetic Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2051"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2052",
+      "title_2010": "Pharmacy Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2052"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2053",
+      "title_2010": "Psychiatric Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2053"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2054",
+      "title_2010": "Respiratory Therapy Technicians",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-2099"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Merged into a redefined residual category; no isolated outcome.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2055",
+      "title_2010": "Surgical Technologists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2055"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2057",
+      "title_2010": "Ophthalmic Medical Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2057"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2061",
+      "title_2010": "Licensed Practical and Licensed Vocational Nurses",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2061"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2071",
+      "title_2010": "Medical Records and Health Information Technicians",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-2072",
+        "29-9021"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Split; health-information technologists also receive workers from old 29-9099. Not a clean one-to-many mapping.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2081",
+      "title_2010": "Opticians, Dispensing",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2081"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2091",
+      "title_2010": "Orthotists and Prosthetists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2091"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2092",
+      "title_2010": "Hearing Aid Specialists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-2092"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-2099",
+      "title_2010": "Health Technologists and Technicians, All Other",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-2036",
+        "29-2099"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Code persists but scope changes: medical dosimetrists split out and respiratory therapy technicians enter the remaining category.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-9011",
+      "title_2010": "Occupational Health and Safety Specialists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "19-5011"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-9012",
+      "title_2010": "Occupational Health and Safety Technicians",
+      "eligible": true,
+      "soc_2018_targets": [
+        "19-5012"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-9091",
+      "title_2010": "Athletic Trainers",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-9091"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-9092",
+      "title_2010": "Genetic Counselors",
+      "eligible": true,
+      "soc_2018_targets": [
+        "29-9092"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "29-9099",
+      "title_2010": "Healthcare Practitioners and Technical Workers, All Other",
+      "eligible": false,
+      "soc_2018_targets": [
+        "29-9021",
+        "29-9093",
+        "29-9099"
+      ],
+      "match_type": "complex_excluded",
+      "note": "Code persists but workers split into health-information technologists and surgical assistants.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-1011",
+      "title_2010": "Home Health Aides",
+      "eligible": false,
+      "soc_2018_targets": [
+        "31-1121"
+      ],
+      "match_type": "complex_excluded",
+      "note": "SOC recode is one-to-one, but OEWS publishes home health aides with personal care aides. An AIOE value for home health aides alone cannot represent the combined group.",
+      "published_aggregate": "31-1120"
+    },
+    {
+      "soc_2010": "31-1013",
+      "title_2010": "Psychiatric Aides",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-1133"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-1014",
+      "title_2010": "Nursing Assistants",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-1131"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-1015",
+      "title_2010": "Orderlies",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-1132"
+      ],
+      "match_type": "one_to_one_recode",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-2011",
+      "title_2010": "Occupational Therapist Assistants",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-2011"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-2012",
+      "title_2010": "Occupational Therapist Aides",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-2012"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-2021",
+      "title_2010": "Physical Therapist Assistants",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-2021"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-2022",
+      "title_2010": "Physical Therapist Aides",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-2022"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9011",
+      "title_2010": "Massage Therapists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9011"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9091",
+      "title_2010": "Dental Assistants",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9091"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9092",
+      "title_2010": "Medical Assistants",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9092"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9093",
+      "title_2010": "Medical Equipment Preparers",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9093"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9094",
+      "title_2010": "Medical Transcriptionists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9094"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9095",
+      "title_2010": "Pharmacy Aides",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9095"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9097",
+      "title_2010": "Phlebotomists",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9097"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    },
+    {
+      "soc_2010": "31-9099",
+      "title_2010": "Healthcare Support Workers, All Other",
+      "eligible": true,
+      "soc_2018_targets": [
+        "31-9099"
+      ],
+      "match_type": "one_to_one_unchanged",
+      "note": "One-to-one correspondence reviewed in SOC manual Appendix A.",
+      "published_aggregate": null
+    }
+  ]
+}

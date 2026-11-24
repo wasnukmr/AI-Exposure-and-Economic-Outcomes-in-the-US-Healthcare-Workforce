@@ -2,100 +2,110 @@
 ECON 3001 — Applied AI in Economics
 
 ## Abstract
-This project examines how artificial intelligence occupational exposure relates to wages and employment across selected U.S. healthcare occupations. We combine the AI Occupational Exposure (AIOE) dataset associated with Felten, Raj, and Seamans (2021) with Bureau of Labor Statistics (BLS) May 2025 national Occupational Employment and Wage Statistics (OEWS). The sample contains 73 occupations; 52 have exact occupational-code matches in the BLS detailed estimates. Practitioner and technical occupations have a higher mean exposure score (0.203) than support occupations (−0.497). Within the matched sample, exposure has a weak positive correlation with annual median wages (r = 0.145) and almost no linear association with employment levels (r = 0.018). These descriptive findings establish differences in occupational exposure but do not identify AI-induced wage changes, productivity gains, or displacement.
+This study examines the relationship between occupational AI exposure and wages in a selected U.S. healthcare workforce sample. We combine Felten, Raj, and Seamans' AIOE scores with BLS May 2025 Occupational Employment and Wage Statistics (OEWS), review historical occupation-code changes, and add BLS education and employment-projection characteristics. The original 73-occupation sample yields 62 comparable occupations after classification review. In this sample, AI exposure and annual median wages have a Pearson correlation of 0.353. However, the exposure coefficient in a log-wage regression falls from 0.453 to 0.078 after including education categories and to 0.048 after also including occupational group. Adding exposure does not improve leave-one-occupation-out prediction relative to the corresponding models without exposure. The results suggest that the unadjusted association is sensitive to occupational composition and education, and do not establish a causal effect of AI on wages.
 
-## 1. Research question and economic framework
-Our central question is: **How does measured AI exposure differ across healthcare occupations, and how is that exposure associated with occupational wages and employment size?**
+## 1. Research question
+How is AI exposure associated with healthcare occupational wages after accounting for typical entry education, and how sensitive is that association to occupation-code matching?
 
-The original project also raised questions about task transformation, productivity, employment projections, and the distribution of gains and losses. The empirical analysis answers the exposure, wage, and employment-level questions using the available data. Productivity and distributional mechanisms are discussed as hypotheses; employment projections and task-level estimates are extensions.
+The economic motivation is that AI may substitute for particular tasks, complement workers, or change the allocation of work. These mechanisms have different implications for productivity and labor demand. Exposure alone cannot identify which mechanism occurs. Wage differences may also reflect education, licensing, specialization, and other factors correlated with exposure.
 
-An occupation comprises multiple tasks. AI could substitute for some tasks, complement workers in others, and introduce additional verification or coordination work. A reduction in time per task could expand capacity, but the labor-market outcome would also depend on demand for services, implementation costs, organizational choices, and workers' ability to perform complementary tasks. Consequently, a high exposure score alone cannot determine whether an occupation benefits or loses.
+We use a cross-sectional observational design. The analysis estimates associations between occupational characteristics, not the effect of adopting AI within an organization.
 
-Wages are also shaped by education, licensure, experience, specialization, and labor-market institutions. Comparing exposure with wages is informative as a descriptive exercise, but an observed relationship cannot isolate AI's contribution from these factors.
+## 2. Data and scope
+**AIOE:** Appendix A contains 774 occupations. The original project sample retains 73 occupations with 2010 SOC prefixes 29 or 31, excluding veterinary occupations 29-1131, 29-2056, and 31-9096. Occupational health and safety roles remain in the original scope even though their updated codes begin with 19. AIOE is a relative exposure index associated with a 2021 publication; it is not a percentage, a measure of current adoption, or a job-loss probability.
 
-## 2. Data, population, and validation
-The exposure source is **Appendix A of AIOE_DataAppendix.xlsx**, containing 774 occupation records. The retained sample uses SOC prefixes 29 and 31 and excludes veterinary codes 29-1131, 29-2056, and 31-9096. It includes occupational health and safety occupations under their original source codes. This is an occupational sample, not a complete census of workers in healthcare industries: hospital administrators and other occupations outside these prefixes are not included.
+**OEWS:** The repository's May 2025 national workbook contains 1,401 rows and 32 fields. Filtering to detailed occupational records yields 830 unique codes. Annual median wage is the wage outcome, and employment represents estimated national cross-industry jobs excluding self-employed workers. This occupational sample is not all workers employed in healthcare industries.
 
-AIOE is a relative exposure index, not a percentage, a current adoption rate, or a probability that a job will disappear. Negative scores indicate lower values of this index, not negative productivity or protection from all forms of technological change.
+**Added BLS characteristics:** Table 1.2 provides typical entry education, related work experience, on-the-job training, 2025 and projected 2035 employment, projected percentage change, and annual openings. These fields were retrieved from the official BLS table and joined using reviewed current codes. Education is the typical entry requirement for an occupation, not workers' actual educational attainment.
 
-The outcome source is **national_M2025_dl.xlsx**, identified within its field documentation as May 2025 OEWS estimates. It contains 1,401 data rows and 32 fields. Restricting to O_GROUP = detailed yields 830 records with unique occupational codes. National cross-industry estimates cover the applicable private and government employment categories; employment excludes self-employed workers. A_MEDIAN is the annual median wage within an occupation, and TOT_EMP is its estimated employment.
+The education and projection extract covers all 62 model occupations. Its median wages agree exactly with the repository OEWS workbook for all 62 records. Projection employment is stored separately in thousands and has different coverage from OEWS employment. Projections are not observed future outcomes or AI-specific forecasts.
 
-Validation reproduced the 73-record healthcare subset directly from the workbook. Every retained occupation code, title, and exposure score matches the CSV, with a numerical tolerance of 10⁻¹² for floating-point representation. We checked code uniqueness, numeric exposure values, outcome positivity, BLS population fields, and matching cardinality. Workbook ZIP-entry integrity checks also passed. These checks validate the repository inputs and their processing; they are not a fresh independent audit of the providers' survey methods.
+## 3. Classification review and validation
+The initial exact-code join produced 52 matches and 21 unmatched records. The official 2010-to-2018 SOC crosswalk identifies 12 additional one-to-one code changes, including six physician categories, dental hygienists, two occupational health and safety roles, and three support occupations.
 
-We use a one-to-one exact SOC-code join. There are **52 matches (71.2%)** and **21 unmatched occupations (28.8%)**. The matched sample contains 40 practitioner/technical and 12 support occupations. Two matched titles change “Therapist” to “Therapy” for occupational therapy assistants and aides; both source titles remain in the audit. All matched records have numeric wage and employment values. Unmatched outcomes remain null. Suppressed or nonnumeric outcomes are never converted to zero.
+A code match is not sufficient on its own. Two categories previously included, 29-2099 and 29-9099, retained their codes while their scope changed. We exclude these from the stricter model rather than treating the old exposure score as directly comparable to the newer outcome.
 
-## 3. Method
-We calculate unweighted occupation-level means and medians for exposure and Pearson correlations between exposure and:
-1. Annual median wages.
-2. Employment levels.
-3. The natural logarithm of employment, as a sensitivity comparison for differences in occupation size.
+| Classification outcome | Occupations |
+|---|---:|
+| Reviewed unchanged one-to-one codes | 50 |
+| Official one-to-one recodes recovered | 12 |
+| Strict model sample | 62 |
+| Complex or aggregated categories excluded | 11 |
+| Original exposure sample | 73 |
 
-Each occupation receives equal weight. A small occupation and a large occupation each contribute one observation to the correlations. These statistics are not estimates for the average healthcare worker. We preserve source precision during calculation and round only the displayed results.
+The 62 observations have unique source and target codes. We do not duplicate a combined outcome across multiple old occupations or copy a parent exposure score across newly separated specialties as if the resulting observations were independent.
 
-Exact-code matching avoids inventing scores for split or combined occupations. It does not fully resolve classification differences. Unmatched records are retained in the exposure analysis and audit but excluded from outcome comparisons. No missing outcomes or exposure scores are imputed.
+The remaining 11 require additional assumptions or aggregation. They include split physician categories, laboratory technologists and technicians combined in OEWS, EMTs and paramedics, changed residual categories, medical records occupations with overlapping transfers, and home health aides published together with personal care aides. Complete reasons and candidate codes are preserved in the crosswalk audit.
 
-## 4. Results
+Validation checks the original CSV against AIOE Appendix A, workbook integrity, unique codes, source population fields, positive numeric outcomes, the 62 BLS wage cross-checks, and reproducibility of the model calculations. Excluded observations retain their original exposure values but have null matched outcomes in the revised export.
 
-### Occupational exposure
-| Group | Occupations | Mean AIOE | Median AIOE | BLS matches |
-|---|---:|---:|---:|---:|
-| Practitioners and technical | 57 | 0.203 | 0.106 | 40 |
-| Healthcare support | 16 | −0.497 | −0.529 | 12 |
-| All retained occupations | 73 | 0.050 | 0.007 | 52 |
+## 4. Empirical method
+The dependent variable is the natural logarithm of the annual median wage for each occupation. We estimate five ordinary least squares specifications:
+1. Exposure only.
+2. Education categories only.
+3. Exposure plus education categories.
+4. Education categories plus an indicator for healthcare support occupations.
+5. Exposure, education categories, and the support indicator.
 
-The difference in group means is approximately 0.700 index units. The descriptive pattern is consistent with different task compositions across the two groups, but task-level data were not analyzed and the mechanism is not established.
+Education enters as five indicators, with high school diploma or equivalent as the reference category. This avoids imposing equal wage increments between credentials. The six education groups contain 11 high-school, 10 postsecondary-nondegree, 11 associate's, 5 bachelor's, 9 master's, and 16 doctoral/professional occupations.
 
-Group averages conceal variation. Medical transcriptionists have an exposure score of 1.063 despite belonging to the support group, while some practitioner and technical occupations have negative scores. Broad occupational categories should therefore not replace occupation-specific comparisons.
+The main adjusted specification is:
 
-### Exposure, wages, and employment
-| Comparison | Occupations | Pearson r |
-|---|---:|---:|
-| AIOE and annual median wages | 52 | 0.145 |
-| AIOE and employment levels | 52 | 0.018 |
-| AIOE and log employment | 52 | −0.150 |
+**ln(annual median wage) = intercept + β × AIOE + education-category indicators + error.**
 
-The positive wage correlation is weak. Its squared value is approximately 0.021, equivalent to about 2.1% of the variation in an unadjusted linear regression of wages on AIOE with an intercept. This is a descriptive fit statistic, not the share of wages caused by AI.
+We report HC3 heteroskedasticity-robust standard errors, R², adjusted R², and leave-one-occupation-out cross-validation error in log-wage units. Lower cross-validation RMSE is better. All models use the same 62 occupations and equal occupation weights.
 
-The employment-level correlation is close to zero. Its sign changes when employment is log-transformed, illustrating that interpretation depends on how occupation size is represented. Neither statistic measures employment growth or job losses.
+Cross-validation was calculated using the OLS leverage identity. For the exposure-plus-education model, its result was checked against 62 explicit refits, each omitting one occupation. Normal-equation residual checks also passed. These checks validate the calculations, but do not establish generalization to different years or healthcare settings.
 
-The matched occupations account for 9,579,490 estimated jobs. This is the sum for the retained matched sample, not total U.S. healthcare employment.
+## 5. Results
+Across the original 73 occupations, mean exposure remains 0.203 for practitioner/technical occupations and −0.497 for support occupations. The overall mean is 0.050. These are occupation-weighted, not worker-weighted, statistics.
 
-| Selected occupation | AIOE | Annual median wage | Estimated employment |
-|---|---:|---:|---:|
-| Registered nurses | 0.229 | $97,550 | 3,379,720 |
-| Genetic counselors | 1.528 | $100,040 | 3,740 |
-| Medical assistants | 0.150 | $45,690 | 817,870 |
-| Medical transcriptionists | 1.063 | $40,410 | 41,550 |
+In the reviewed 62-occupation sample, the correlation of exposure with wage levels is **0.353**, compared with **0.145** in the historical exact-code baseline. The samples differ, so this is evidence of sensitivity to composition rather than a time trend.
 
-These examples show why exposure, pay, and workforce size should be displayed separately. Medical transcriptionists have higher exposure than registered nurses but much lower wages. Genetic counselors have high exposure but represent a much smaller workforce.
+All regressions below use log wages and the same 62 observations.
 
-### Coverage sensitivity
-Matched occupations have mean AIOE of 0.005, compared with 0.162 among unmatched occupations. Within practitioner/technical roles, the matched mean is 0.112 versus 0.419 for unmatched roles; within support roles, the corresponding values are −0.352 and −0.931. Missing matches therefore do not simply remove an exposure-neutral subset. The 52-occupation correlations should not be generalized automatically to all 73 occupations.
+| Model | AIOE coefficient | HC3 SE for AIOE | R² | Adjusted R² | LOOCV RMSE |
+|---|---:|---:|---:|---:|---:|
+| exposure + only | 0.453 | 0.109 | 0.196 | 0.183 | 0.596 |
+| education + only | — | — | 0.749 | 0.727 | 0.353 |
+| exposure + education | 0.078 | 0.083 | 0.753 | 0.726 | 0.356 |
+| education + group | — | — | 0.759 | 0.733 | 0.347 |
+| exposure + education + group | 0.048 | 0.084 | 0.761 | 0.730 | 0.351 |
 
-## 5. Economic interpretation and illustrative productivity scenario
-The findings support an occupation-specific approach to studying AI. A high exposure score may identify work likely to interact with AI capabilities, but does not establish whether that interaction substitutes for labor or increases its value. The weak wage relationship also cautions against assuming that high exposure automatically identifies either the highest-paid workers or the workers most economically vulnerable.
+The unadjusted coefficient is 0.453 log points per one-unit difference in the exposure index. Once education is included, the coefficient falls to 0.078, with robust standard error 0.083. Its exact exponential interpretation is approximately an 8.1% conditional wage difference per index unit, but the estimate is uncertain and is not a causal effect. Adding the support-group indicator reduces the coefficient further to 0.048.
 
-A simple scenario illustrates the distinction between capacity and realized gains. Assume a 40-hour week, 30% of time spent on affected tasks, and a 20% reduction in time on those tasks. Potential time released equals:
+Education-only prediction has a lower cross-validation RMSE than exposure plus education (0.353 versus 0.356). Similarly, education plus group has lower error than the same model with exposure added (0.347 versus 0.351). The small increases in in-sample R² from adding exposure therefore do not translate into better prediction in these checks.
 
-**40 × 0.30 × 0.20 = 2.4 hours per week**, or 6% of scheduled hours.
+This distinction matters: the strongest project conclusion is not that AI exposure explains healthcare wages. It is that the apparent unadjusted relationship becomes much smaller after accounting for education and occupational composition. The data do not establish that the remaining coefficient is zero, either.
 
-These inputs are illustrative assumptions, not estimates derived from AIOE. At unchanged output, the scenario represents potential time savings. If every released hour could instead be used productively, output might rise; training, review, errors, and implementation costs could reduce the benefit. No wage increase or staffing reduction follows mechanically.
+## 6. Economic interpretation
+The results are consistent with education and the composition of occupations accounting for much of the observed exposure-wage association. They do not prove a mechanism. An occupation's educational requirements may correlate with task complexity, professional restrictions, and specialized skills that are themselves related to wages.
 
-Potential gains could accrue to workers through reduced administrative burden, to patients through additional capacity, or to employers through lower costs. Their distribution depends on choices and institutions not observed in this dataset. These are economic mechanisms to investigate, not measured findings.
+The original sample also contains substantial variation within broad occupational groups. Exposure should therefore be analyzed at the occupation level rather than used to label all support workers or all practitioners as uniformly vulnerable.
 
-## 6. Limitations and conclusion
-This cross-section cannot establish causal effects. Exposure predates the BLS reference period and is not a direct measure of contemporary generative-AI adoption. Occupational averages obscure differences among workers and workplaces. The sample is selective, occupation codes are only partially aligned, and the analysis does not control for qualifications, hours, industry composition, or other determinants of pay. No statistical significance claim is made.
+Employment projections add a useful separate comparison for workforce planning, but are not included as controls in the wage models. Using future projected growth as a contemporaneous wage control would complicate interpretation. The projections should be displayed as BLS forecasts, with their period and units clearly identified.
 
-A stronger extension would reconcile occupational classifications using a documented crosswalk, add task characteristics and relevant controls, and assemble repeated labor-market observations plus a defensible measure of adoption. Employment projections would provide a separate forward-looking comparison, but should not be presented as AI-specific forecasts.
+An illustrative productivity scenario remains separate from the empirical model: a 40-hour week × 30% affected-task share × 20% time reduction equals 2.4 potential hours released per week. These are assumed inputs, not estimates derived from AIOE. Time savings do not automatically produce higher wages, lower staffing, or realized output gains.
 
-The central conclusion is that AI exposure varies meaningfully across selected healthcare occupations, while its descriptive relationship with wages and employment size is weak in the exact-match sample. The data support a transparent comparison of exposure and labor-market characteristics. They do not support claims that AI has already raised wages, caused displacement, or generated a particular productivity gain.
+## 7. Limitations and next extensions
+The sample is small and selected. Excluding complex categories can change its composition, while education categories remain coarse. Occupational group and education do not capture all determinants of pay. The analysis uses historical exposure scores and a later wage cross-section, not measured organizational adoption. Robust standard errors cannot resolve omitted-variable bias or nonrandom sample selection.
 
-## Reproducibility and sources
-- [Project repository](https://github.com/wasnukmr/AI-Exposure-and-Economic-Outcomes-in-the-US-Healthcare-Workforce)
-- [Validated JSON](../data/processed/healthcare_workforce.json) and [complete match audit](../data/processed/occupation_match_audit.csv).
-- [Validation report and reproduction instructions](VALIDATION.md).
-- Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. *Strategic Management Journal, 42*(12), 2195–2217. https://doi.org/10.1002/smj.3286. [Source repository](https://github.com/AIOE-Data/AIOE).
-- U.S. Bureau of Labor Statistics. *May 2025 Occupational Employment and Wage Statistics, national estimates*. [Data tables](https://www.bls.gov/oes/tables.htm); field definitions in the repository workbook.
-- U.S. Bureau of Labor Statistics. [OEWS frequently asked questions](https://www.bls.gov/oes/oes_ques.htm).
+The next useful extension is O*NET task and work-context data, using a small prespecified set of variables and a documented code mapping. A separate language-model exposure measure could test sensitivity to the type of AI measured; it should not be silently substituted for the original AIOE index.
 
-**AI assistance disclosure:** ChatGPT assisted with data validation, code generation, interpretation, and drafting. The group should review the analysis and adapt this disclosure to the course policy before submission.
+For complex mappings, aggregate employment and employment-weighted **mean** wages can sometimes reconstruct old categories. Occupational medians cannot be averaged to obtain a valid combined median. Many-to-one exposure aggregation requires defensible weights or a clearly labeled sensitivity assumption. Historical wage comparisons would additionally require stable classification, inflation adjustment, and review of survey-method changes.
+
+## 8. Conclusion
+Official classification reconciliation improves coverage to 62 comparable occupations and corrects two misleading exact-code matches. Adding education and training characteristics makes the analysis more informative, but does not make the evidence causal. The unadjusted exposure-wage relationship weakens substantially with education controls, and exposure does not improve cross-validated prediction over the corresponding education-based models. A credible interpretation of AI's economic implications must distinguish exposure from adoption and account for occupational characteristics.
+
+## Sources and reproducibility
+- Felten, E., Raj, M., & Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. *Strategic Management Journal, 42*(12), 2195–2217. https://doi.org/10.1002/smj.3286. [AIOE repository](https://github.com/AIOE-Data/AIOE).
+- U.S. Bureau of Labor Statistics. [May 2025 OEWS national estimates](https://www.bls.gov/oes/tables.htm), using the existing project workbook.
+- U.S. Office of Management and Budget. [2018 SOC Manual](https://www.bls.gov/soc/2018/soc_2018_manual.pdf), Appendix A, PDF pages 235–237. [BLS crosswalk download page](https://www.bls.gov/soc/2018/crosswalks.htm).
+- U.S. Bureau of Labor Statistics. [Table 1.2: Occupational projections, 2025–35, and worker characteristics, 2025](https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm).
+- [Revised data and complete regression coefficients](../data/processed/healthcare_workforce_v2.json).
+- [Validation and model documentation](MODEL_UPGRADE.md).
+- [Project repository](https://github.com/wasnukmr/AI-Exposure-and-Economic-Outcomes-in-the-US-Healthcare-Workforce).
+
+Run `node scripts/reproduce_model.mjs` from a checkout to validate the historical baseline, reconstruct the revised sample, and compare the models with the saved results. Calculations were executed in JavaScript; the Node filesystem entry point was not run because the local execution environment was unavailable.
+
+**AI assistance disclosure:** ChatGPT assisted with source retrieval, classification review, code generation, statistical analysis, and drafting. The group should review the work and conform this disclosure to course requirements.

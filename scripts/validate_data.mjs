@@ -44,3 +44,5 @@ if (JSON.stringify(result.merged)!==JSON.stringify(committed.occupations) || JSO
 }
 console.log(JSON.stringify(result.summary,null,2));
 console.log("PASS: source subset, join and statistics reproduce the committed data.");
+
+export { unzip, sheet, analyze };
